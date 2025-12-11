@@ -1,0 +1,90 @@
+User: Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
+
+GitHub Copilot: I'll search the repository for TypeScript/TSX files to inspect for missing documentation.
+
+Searched for files matching `**/*.{ts,tsx,js,jsx}`, 14 matches
+
+I'll open the main store and utility files to identify undocumented functions and modules.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/store/TaskStore.tsx)
+
+Now I'll inspect the helpers and API utilities for missing documentation and complex logic.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/utils/helpers.ts)
+
+I'll open the API utility file to identify undocumented public surfaces and assumptions about endpoints.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/utils/api.ts)
+
+I'll open the types file to locate public interfaces that need documentation.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/types/index.ts)
+
+Next I'll inspect UI components for undocumented props and non-obvious logic (validation, event handling).
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/components/TaskForm.tsx)
+
+I'll open TaskCard and TaskFilter components to capture any non-obvious logic (e.g., priority color usage) that needs documentation.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/components/TaskCard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/components/TaskFilter.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/components/Layout.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/pages/Dashboard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/pages/TaskDetail.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/main.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/src/App.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/vite.config.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/package.json)
+
+I'm going to create the audit file docs/MISSING_DOCUMENTATION.md with structured entries for each missing documentation item.
+
+Created [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/330/docs/MISSING_DOCUMENTATION.md)
+
+Finding: I found 14 missing documentation items (module-level docs, function JSDoc, type field docs, README & architecture gaps). I wrote a structured audit to MISSING_DOCUMENTATION.md with Target / Issue / Context / Impact / Suggested Documentation / Placement for each item.
+
+Next step: I can add README.md, ARCHITECTURE.md, and JSDoc stubs in priority order (README first). Which would you like me to implement first?
+
+Made changes.
