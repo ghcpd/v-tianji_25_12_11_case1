@@ -1,0 +1,98 @@
+User: Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
+
+GitHub Copilot: Scanning project files to locate source files to analyze.
+
+Searched for files matching `**/*.{ts,tsx,js,jsx,css,md,json,html}`, 26 matches
+
+Opening key source files to inspect exported functions and components for missing documentation. I'll read types, utils, and store first.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/types/index.ts)
+
+Reading utility helpers to find functions that need documentation.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/utils/helpers.ts)
+
+Reading API utility to check what public functions exist and whether documentation is present.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/utils/api.ts)
+
+Inspecting TaskStore for state management patterns and undocumented behaviors.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/store/TaskStore.tsx)
+
+Reviewing UI components (TaskCard) to document props and behaviors like click handlers and conditional rendering.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/components/TaskCard.tsx)
+
+Checking TaskFilter component for undocumented props and filter behavior.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/components/TaskFilter.tsx)
+
+Opening TaskForm to document form fields, validation hooks and props.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/components/TaskForm.tsx)
+
+Checking Layout and pages to identify missing module docs and high-level architecture descriptions. I'll open Layout, App, and pages.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/components/Layout.tsx)
+
+Reading Dashboard, ProjectView, TaskDetail, App, and main to capture higher-level flows and identify missing architectural docs.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/pages/Dashboard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/pages/ProjectView.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/pages/TaskDetail.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/App.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/src/main.tsx)
+
+I'll collect the remaining files and synthesize structured missing-doc entries before writing the output file. Next step: I'll read package.json and index.html to capture scripts and env usage.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/package.json)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/index.html)
+
+Found numerous missing/insufficient docs in utils, store, components, and no repo README; I'll write a comprehensive report file listing each missing doc item with suggested text and placement.
+
+Created [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/v-tianji_25_12_11_case1/docs/missing-documentation-detection.md)
+
+Done. I created missing-documentation-detection.md with a comprehensive, structured audit of missing documentation (module-level, function-level, architectural, and README-level items) and suggested text/placements for each. Do you want me to open the file and add these suggestions as inline JSDoc comments in the source files as a next step?
+
+Made changes.
