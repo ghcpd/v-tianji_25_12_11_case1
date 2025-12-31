@@ -1,0 +1,19 @@
+Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
