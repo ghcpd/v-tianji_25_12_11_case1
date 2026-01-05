@@ -17,3 +17,20 @@ Complex or non-obvious logic blocks that require documentation but currently hav
 Missing README sections (usage, setup, environment, workflows, etc.)
 
 For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
