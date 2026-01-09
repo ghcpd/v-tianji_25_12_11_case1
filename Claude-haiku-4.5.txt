@@ -1,0 +1,134 @@
+User: Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
+
+GitHub Copilot: Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/package.json)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/main.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/App.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/types/index.ts)
+
+Now let me read more of the core files: 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/store/TaskStore.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/utils/api.ts#1-1), lines 1 to 80
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/utils/helpers.ts#1-1), lines 1 to 60
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/utils/helpers.ts#55-55), lines 55 to 141
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/utils/api.ts#80-80), lines 80 to 104
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/pages/Dashboard.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/components/Layout.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/pages/TaskDetail.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/pages/ProjectView.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/components/TaskCard.tsx#1-1), lines 1 to 80
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/components/TaskForm.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/components/TaskForm.tsx#100-100), lines 100 to 214
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/components/TaskFilter.tsx)
+
+Now let me check for a README file and the vite config: 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/vite.config.ts)
+
+Now let me read the remaining part of TaskDetail.tsx to see the complete picture: 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/pages/TaskDetail.tsx#100-100), lines 100 to 179
+
+Perfect! Now I have a complete understanding of the codebase. Let me create a comprehensive documentation audit report. 
+
+User: continue
+
+GitHub Copilot: Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/store/TaskStore.tsx#1-1), lines 1 to 100
+
+Now let me read the rest and check the types file: 
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/src/types/index.ts)
+
+Let me check for README files: 
+
+Searched for files matching `**/README*`, no matches
+
+Perfect! Now I have all the information I need. Let me create a comprehensive documentation audit report: 
+
+Created [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/Claude-haiku-4.5/MISSING_DOCUMENTATION_AUDIT.md)
+
+Perfect! I've completed a comprehensive documentation audit of your React task management application. Here's what I've delivered:
+
+## Summary
+
+I analyzed your full codebase and created a detailed **18-item missing documentation audit** with structured findings:
+
+### Key Findings:
+- **1 Critical gap:** No project README (severe onboarding blocker)
+- **8 High-priority gaps:** Core store and helper function documentation
+- **5 Medium-priority gaps:** UI component documentation
+- **4 Low-priority gaps:** Type definitions, configuration, root component
+
+### For Each Item, I Provided:
+1. **Target** - Exact file path and symbol
+2. **Issue** - What's missing and why it matters
+3. **Context** - Relevant code excerpts
+4. **Impact** - How it affects developers and maintenance
+5. **Suggested Documentation** - Ready-to-use JSDoc comments
+6. **Placement** - Exact location in codebase
+
+### The Report Includes:
+- Executive summary of documentation gaps
+- Detailed analysis of 18 missing documentation items
+- Ready-to-implement JSDoc comments for all items
+- Impact assessment on onboarding and maintenance
+- Recommended implementation roadmap (4 phases)
+- Tools and standards guidance
+
+**Output file:** MISSING_DOCUMENTATION_AUDIT.md
+
+The audit is comprehensive and immediately actionable—you can copy the suggested documentation directly into your code files.
+
+Made changes.
