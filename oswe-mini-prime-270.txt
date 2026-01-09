@@ -1,0 +1,124 @@
+User: Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
+
+GitHub Copilot: I'm going to scan the repository for source files and search for missing documentation across exported symbols and README content. I'll list files and then inspect each for doc comments and high-level docs.
+
+Created 6 todos
+
+Searched for files matching `**/*.{ts,tsx,js,jsx,md,json,css,html}`, 26 matches
+
+Now I'll read project source files to locate exports and missing docs.
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/main.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/App.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/store/TaskStore.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/types/index.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/utils/helpers.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/utils/api.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/components/Layout.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/components/TaskCard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/components/TaskForm.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/components/TaskFilter.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/pages/Dashboard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/pages/TaskDetail.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/src/pages/ProjectView.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/package.json)
+
+Searched for regex `TODO|FIXME|HACK|REFACTOR|@deprecated|@todo` (`**/*.*`), no results
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/vite.config.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/index.html)
+
+I'll create a documentation audit file with structured findings and suggested docs for each item.
+
+Using "Apply Patch"
+
+
+```
+
+```
+
+
+Searched for regex `export default function|export function|export const|export interface|export type` (`**/src/**/*.*`), 27 results
+
+Completed: *List source files* (1/6)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/oswe-mini-prime%20%28new%29/docs/MISSING_DOCUMENTATION.md#1-1), lines 1 to 201
+
+I'll append a few targeted missing-doc entries (validateTaskData timezone, API 401 redirect mismatch, TaskStore addTask fallback behaviors).
+
+Continue to iterate?
+[object Object]
+
+Made changes.
+
+User: @agent Continue: "Continue to iterate?"
+
+GitHub Copilot: Using "Apply Patch"
+
+
+```
+
+```
+Done — I audited the repository and added a consolidated report with missing documentation items.
+
+- File added: MISSING_DOCUMENTATION.md  
+  - Contains per-target entries with: Target, Issue, Context, Impact, Suggested Documentation, Placement.
+  - Covers high-priority items (README, App, main, store API, types, utils, components, pages, API client behavior, debounce/throttle caveats, and potential UX/route mismatches).
+
+Next steps I can take (pick one or more):
+- Add the suggested TSDoc comments to the files automatically.
+- Create a README.md and ARCHITECTURE.md with onboarding steps and project overview.
+- Open a PR with the doc changes and small refactors (e.g., centralizing `getPriorityColor`, or adding a `/login` route).
+
+Which would you like me to do next?
+
+Made changes.
