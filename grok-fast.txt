@@ -1,0 +1,96 @@
+User: Prompt
+
+Your task is to analyze an existing project codebase and identify all missing documentation that may impact maintainability, onboarding efficiency, and developer understanding.
+
+Given the full project source code, perform a comprehensive documentation audit and produce structured outputs that cover:
+
+Missing function/method documentation
+
+Missing module-level or feature-level documentation
+
+Missing architectural or high-level explanations
+
+Public API surfaces lacking documentation
+
+Complex or non-obvious logic blocks that require documentation but currently have none
+
+Missing README sections (usage, setup, environment, workflows, etc.)
+
+For each missing documentation item, generate one structured section containing:
+
+Target: File path + symbol name (function/class/module)
+
+Issue: What documentation is missing
+
+Context: Relevant code excerpts or patterns showing the need for documentation
+
+Impact: How this missing documentation affects comprehension, onboarding, or maintenance
+
+Suggested Documentation: A clear and concise doc paragraph that should be added
+
+Placement: Where in the codebase the documentation should be inserted
+
+All structured outputs must be written to an output file.
+
+Title: Missing Documentation Detection
+Description: Analyze the full project source code to identify all missing documentation, explain the impact, provide suggested documentation for each item, and write all structured results into a file.
+
+GitHub Copilot: Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/types/index.ts)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/utils/api.ts#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/utils/helpers.ts#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/store/TaskStore.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/store/TaskStore.tsx#101-101), lines 101 to 141
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/App.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/main.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/Layout.tsx#1-1), lines 1 to 50
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/Layout.tsx#51-51), lines 51 to 57
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/TaskCard.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/TaskFilter.tsx)
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/utils/helpers.ts#101-101), lines 101 to 141
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/TaskForm.tsx#1-1), lines 1 to 150
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/components/TaskForm.tsx#151-151), lines 151 to 214
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/pages/Dashboard.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/pages/TaskDetail.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/pages/TaskDetail.tsx#101-101), lines 101 to 179
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/pages/ProjectView.tsx#1-1), lines 1 to 100
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/src/pages/ProjectView.tsx#101-101), lines 101 to 109
+
+Read [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/package.json)
+
+Created [](file:///c%3A/Users/v-tianji/Desktop/ghcpd/grok-fast/missing_documentation.md)
+
+I have completed a comprehensive documentation audit of the project codebase. The analysis identified extensive missing documentation across all layers of the application, from high-level architectural explanations to detailed function and component documentation.
+
+Key findings include:
+- **No README.md** - Critical for project understanding and onboarding
+- **Zero JSDoc comments** - All 60+ functions, interfaces, and components lack documentation
+- **Missing architectural context** - No explanation of data flow, patterns, or system design
+- **Undocumented complex logic** - Priority calculation, filtering, and sorting algorithms have no inline explanations
+
+I've created missing_documentation.md containing 60 structured sections, each detailing:
+- What documentation is missing
+- Why it matters for maintainability and onboarding  
+- Specific suggested documentation text
+- Exact placement locations in the codebase
+
+The file provides actionable guidance for systematically adding comprehensive documentation to make the codebase maintainable and developer-friendly. This includes everything from module-level overviews to inline comments for complex algorithms.
+
+Made changes.
